@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pete's Pet Shop - Sign Up</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylel&s.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <strong>Petes Adoption Store</strong>
+        <div>
+          <a href="home.html">Home</a>
+          <a href="index.html">Pet Info</a>
+          <a href="term_con.html">Terms & Conditions</a>
+        </div>
+      </nav>
+
+    <div class="auth-container">
+        <div class="pet-shop-header">
+            <img src="images/puppy face.jpg" alt="signup pic" class="logo">
+            <h1>Join The Family Today!</h1>
+            <p>Create an account to start adopting pets</p>
+        </div>
+        
+        <form id="signupForm" class="auth-form">
+            <div class="form-group">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" required>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" required>
+    
+            </div>
+            
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" required>
+
+                <div class="password-strength">
+                    <div class="strength-bar"></div>
+                    <span class="strength-text">Weak</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="signupConfirm">Confirm Password</label>
+                <input type="password" id="signupConfirm" required>
+            
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="termsAgree" required>
+                <label for="termsAgree">I agree to the <a href="term_con.html">Terms of Service and Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </form>
+        
+
+    
+    <footer>
+        <p>&copy; 2025 Pet Adoption Store | <a href="sign.html">Sign up</a> | <a href="login.html"> Log in</a></p>
+      </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/db-connect.js"></script>
+    <script src="js/authen.js"></script>
+    <script src="js/db-connect.js"></script>
+</body>
+</html>

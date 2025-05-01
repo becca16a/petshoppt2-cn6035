@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pete's Pet Shop - Login</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylel&s.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <strong>Petes Adoption Store</strong>
+        <div>
+          <a href="home.html">Home</a>
+          <a href="index.html">Pet Info</a>
+          <a href="term_con.html">Terms & Conditions</a>
+        </div>
+      </nav>
+
+    <div class="auth-container">
+        <div class="pet-shop-header">
+            <img src="images/puppy face.jpg" alt="login pic" class="logo">
+            <h1>Welcome Back!</h1>
+            <p>Login to access your pet adoption information & more!</p>
+        </div>
+        
+        <form id="loginForm" class="auth-form">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required>
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required>
+                
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Login</button>
+            
+            <div class="form-footer">
+                <p>New to Pete's? <a href="sign.html">Create an account</a></p>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+        </form>
+        
+
+    <footer>
+        <p>&copy; 2025 Pet Adoption Store | <a href="sign.html">Sign up</a> | <a href="login.html"> Log in</a></p>
+      </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/db-connect.js"></script>
+    <script src="js/authen.js"></script>
+    <script src="js/db-connect.js"></script>
+</body>
+</html>
