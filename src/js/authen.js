@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Password strength indicator for signup
+    // it shows the strength of the password in the signup form
     const passwordInput = document.getElementById('signupPassword');
     if(passwordInput) {
         passwordInput.addEventListener('input', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Contains uppercase
             if (password.match(/[A-Z]/)) strength += 1;
             
-            // Update UI
+            // Updated UI
             const width = strength * 25;
             strengthBar.style.width = `${width}%`;
             
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Forgot password handler
+    
     const forgotPasswordLink = document.querySelector('.forgot-password');
     if(forgotPasswordLink) {
         forgotPasswordLink.addEventListener('click', function(e) {

@@ -44,7 +44,7 @@
       const userCredential = await auth.createUserWithEmailAndPassword(email, password);
       const user = userCredential.user;
       
-      // Save additional user data
+      
       await db.collection('users').doc(user.uid).set({
         name: name,
         email: email,
@@ -52,7 +52,7 @@
         lastLogin: firebase.firestore.FieldValue.serverTimestamp()
       });
       
-      // Store user data
+      
       localStorage.setItem('userToken', await user.getIdToken());
       localStorage.setItem('userEmail', user.email);
       localStorage.setItem('userName', name);
@@ -63,7 +63,7 @@
     }
   }
   
-  // Make functions available globally
+  
   window.authFunctions = {
     authenticateUser,
     registerUser
