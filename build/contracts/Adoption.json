@@ -18,8 +18,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -51,8 +50,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"petId\",\"type\":\"uint256\"}],\"name\":\"adopt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"adopters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAdopters\",\"outputs\":[{\"internalType\":\"address[16]\",\"name\":\"\",\"type\":\"address[16]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Adoption.sol\":\"Adoption\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Adoption.sol\":{\"keccak256\":\"0x3e3762bfac833c589553f457c967f4d291d25f6e42682ba199ec20d4397f1d53\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5ff52810005a5d4b044bdde34769266b216756898e29571252c5c5def14c5c09\",\"dweb:/ipfs/QmajSQDoJwwHUH26MUFtASEgfSXYHUV4zFdq5XDmTpDe9J\"]}},\"version\":1}",
@@ -1019,7 +1017,7 @@
   "sourceMap": "60:499:0:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "60:499:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;458:98;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;140:27;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;199:219::-;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;458:98::-;502:18;;:::i;:::-;533:15;;;;;;;;;;;-1:-1:-1;;533:15:0;;-1:-1:-1;533:15:0;;;;-1:-1:-1;;;;;533:15:0;;;;;;;;;;;;;;;;;;;;;;458:98;:::o;140:27::-;;;;;;;;;;;;;;-1:-1:-1;;;;;140:27:0;;-1:-1:-1;140:27:0;:::o;199:219::-;242:4;290:2;281:5;:11;;259:69;;;;-1:-1:-1;;;259:69:0;;;;;;;:::i;:::-;;;;;;;;;367:10;349:8;358:5;349:15;;;;;-1:-1:-1;;;349:15:0;;;;;;;;;;:28;;-1:-1:-1;;;;;;349:28:0;-1:-1:-1;;;;;349:28:0;;;;;;;;;;-1:-1:-1;405:5:0;199:219::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;:::o;14:190:2:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:2;;84:120;-1:-1:-1;84:120:2:o;209:203::-;-1:-1:-1;;;;;373:32:2;;;;355:51;;343:2;328:18;;310:102::o;417:523::-;599:3;584:19;;588:9;680:6;417:523;714:220;728:4;725:1;722:11;714:220;;;791:13;;-1:-1:-1;;;;;787:39:2;775:52;;850:4;874:12;;;;909:15;;;;823:1;741:9;714:220;;;718:3;;;566:374;;;;:::o;945:355::-;1147:2;1129:21;;;1186:2;1166:18;;;1159:30;1225:33;1220:2;1205:18;;1198:61;1291:2;1276:18;;1119:181::o;1305:177::-;1451:25;;;1439:2;1424:18;;1406:76::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract Adoption {\r\n    // State variable to store the adopting addresses\r\n    address[16] public adopters;\r\n\r\n    // Adopting a pet\r\n    function adopt(uint petId) public returns (uint) {\r\n        require(petId >= 0 && petId <= 15, \"Pet ID must be between 0 and 15\");\r\n        \r\n        adopters[petId] = msg.sender;\r\n        \r\n        return petId;\r\n    }\r\n\r\n    // Retrieving the adopters\r\n    function getAdopters() public view returns (address[16] memory) {\r\n        return adopters;\r\n    }\r\n}\r\n\r\n",
-  "sourcePath": "C:\\Users\\rebak\\OneDrive\\Documents\\petshop - CN6035,pt2\\pet-shop-tutorial\\contracts\\Adoption.sol",
+  "sourcePath": "C:\\Users\\rebak\\Documents\\petshop-something\\petshoppt2-cn6035\\contracts\\Adoption.sol",
   "ast": {
     "absolutePath": "project:/contracts/Adoption.sol",
     "exportedSymbols": {
@@ -1588,13 +1586,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x5aBC29ce3c8b8Afec0b69dbACA342DB799B18eF5",
-      "transactionHash": "0x248da8de282eca0e7b35d8d7e5b9fd88e8a29725073f88a499f3812afb8493d0"
+      "address": "0x27f6861F7115dDB2693Eaabae60eB99D206EB201",
+      "transactionHash": "0x3f0e684cf3a4af607af0d95d54aa6c55a6a8515b81f8a873a916b346c1127ba3"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-05-01T07:02:32.568Z",
-  "networkType": "ethereum",
+  "updatedAt": "2025-05-01T15:56:00.212Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

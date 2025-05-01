@@ -43,7 +43,7 @@ App = {
   },
 
   initContract: function () {
-    $.getJSON("contracts/Adoption.json", function(data) {
+    $.getJSON("../contract/Adoption.json", function(data) {
       var AdoptionArtifact = data;
       App.contracts.Adoption = TruffleContract(AdoptionArtifact);
       App.contracts.Adoption.setProvider(App.web3Provider);
@@ -53,6 +53,8 @@ App = {
 
     return App.bindEvents();
   },
+
+  
 
   bindEvents: function () {
     $(document).on('click', '.adopt-btn', App.handleAdopt);
@@ -74,6 +76,7 @@ App = {
 
   handleAdopt: function (event) {
     event.preventDefault();
+    console.log("Adopt button clicked!");
 
     var petId = parseInt($(event.target).data('id'));
 
