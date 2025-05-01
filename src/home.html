@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Adoption - Home</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    main {
+      flex: 1;
+      padding-bottom: 60px; /* Space for footer */
+    }
+    
+    header {
+      background: linear-gradient(to right, #ffb347, #ffcc33);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header button {
+      background-color: #2A3B2F;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    header button:hover {
+      background-color: #2f603d;
+    }
+    .section-title {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 2rem;
+      color: #333;
+    }
+    .pets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .pet-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      width: 250px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .pet-card:hover {
+      transform: translateY(-5px);
+    }
+    .pet-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .pet-card .info {
+      padding: 1rem;
+      text-align: center;
+    }
+    .pet-card .info h3 {
+      margin: 0.5rem 0;
+    }
+    .adopt-btn {
+      background-color: #e7c951;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .adopt-btn:hover {
+      background-color: #d9b63a;
+    }
+
+    footer {
+      background-color: #2A3B2F;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      /* Removed position: fixed */
+    }
+    
+    footer a {
+      color: lightgray;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    nav {
+      padding: 1rem;
+      background-color: #2A3B2F;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <strong>Petes Adoption Store</strong>
+    <div>
+      <a href="home.html">Home</a>
+      <a href="index.html">Pet Info</a>
+      <a href="term_con.html">Terms & Conditions</a>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Welcome to Pete's Pet Adoption Store 🐶🐱</h1>
+      <p>Find your new furry friend and give them a forever home!</p>
+      <button onclick="location.href='index.html'">Adopt Now</button>
+    </header>
+
+    <h1 class="section-title" id="pets-section" style="color: #fefefe;">Available Pets</h1>
+
+    <div class="pets">
+      <div class="pet-card">
+        <img src="../images/scottish-terrier.jpeg" alt="Scottish Terrier"/>
+        <div class="info">
+          <h3>Frieda</h3>
+          <p>Scottish Terrier</p>
+          <button class="adopt-btn">Adopt</button>
+        </div>
+      </div>
+      <div class="pet-card">
+        <img src="../images/french-bulldog.jpeg" alt="French Bulldog"/>
+        <div class="info">
+          <h3>Collins</h3>
+          <p>French Bulldog</p>
+          <button class="adopt-btn">Adopt</button>
+        </div>
+      </div>
+      <!-- Add more pets here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pet Adoption Store | <a href="term_con.html">Terms and Conditions</a></p>
+  </footer>
+
+  <script>
+    function scrollToPets() {
+      document.getElementById("pets-section").scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.querySelectorAll(".adopt-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Thanks for choosing to adopt! This will connect to the adoption smart contract.");
+        // Here you can trigger Web3 interaction
+      });
+    });
+  </script>
+</body>
+</html>
