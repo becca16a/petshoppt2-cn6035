@@ -3,15 +3,15 @@ module.exports = {
     development: {
       host: "127.0.0.1",
       port: 7545,
-      network_id: "*", // Match any network id
-      gas: 6721975, // Added gas limit to prevent deployment failures
-      gasPrice: 20000000000 // Added gas price (20 gwei)
+      network_id: "*", 
+      gas: 6721975, 
+      gasPrice: 20000000000 
     },
     develop: {
-      host: "127.0.0.1", // Added missing host definition
+      host: "127.0.0.1", 
       port: 8545,
-      network_id: "*", // Added missing network_id
-      gas: 6721975 // Added gas limit
+      network_id: "*",
+      gas: 6721975 
     }
   },
   compilers: {
@@ -26,6 +26,6 @@ module.exports = {
     }
   },
   mocha: {
-    timeout: 10000 // Added test timeout (10 seconds)
+    timeout: 10000 
   }
 };

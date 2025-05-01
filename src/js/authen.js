@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Length check
             if (password.length >= 8) strength += 1;
-            // Contains numbers
+            
             if (password.match(/\d/)) strength += 1;
-            // Contains special chars
+            
             if (password.match(/[^A-Za-z0-9]/)) strength += 1;
-            // Contains uppercase
+            
             if (password.match(/[A-Z]/)) strength += 1;
             
             // Updated UI
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form submission handlers
+    
     const loginForm = document.getElementById('loginForm');
     if(loginForm) {
         loginForm.addEventListener('submit', async function(e) {

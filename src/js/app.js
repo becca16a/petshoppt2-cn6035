@@ -37,7 +37,7 @@ App = {
     } else {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
-    web3 = new Web3(App.web3Provider);
+    App.web3 = new Web3(App.web3Provider);
 
     return App.initContract();
   },
@@ -76,11 +76,11 @@ App = {
 
   handleAdopt: function (event) {
     event.preventDefault();
-    console.log("Adopt button clicked!");
+   
 
     var petId = parseInt($(event.target).data('id'));
 
-    web3.eth.getAccounts(function (error, accounts) {
+    App.web3.eth.getAccounts(function (error, accounts) {
       if (error) {
         console.log(error);
       }
